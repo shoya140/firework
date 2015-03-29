@@ -9,7 +9,7 @@ void ofApp::setup(){
     ofBackground(0,0,0);
     nBandsToGet = 512;
     
-    mySound.loadSound("perfume.wav");
+    mySound.loadSound("winter_rain.mp3");
     mySound.setLoop(true);
     mySound.play();
     ofSetLineWidth(4);
@@ -30,7 +30,7 @@ void ofApp::draw(){
     for(int i=0;i<nBandsToGet;i++){
         ofSetColor(ofColor::fromHsb(i/2, 140, 255, 100+fft[0]*500));
         ofRotateZ(angle/10);
-        ofLine(width*i*3,(ofGetHeight())/2,width*i*3+fft[i],(ofGetHeight()+fft[i]*-300)/2);
+        ofLine(width*i*3,(ofGetHeight())/2,width*i*3+fft[i],(ofGetHeight()+fft[i]*-400)/2);
     }
 }
 //--------------------------------------------------------------
